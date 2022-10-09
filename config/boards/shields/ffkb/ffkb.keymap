@@ -45,19 +45,28 @@
         sensors = <&encoder_1 &encoder_2 &encoder_3>;
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NAV SYM>;
+            then-layer = <FUNC>;
+        };
+    };
+
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <125>;
+            global-quick-tap;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
         hs: homerow_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFT";
+            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick_tap_ms = <0>;
@@ -75,36 +84,37 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 
             bindings = <
-     &kp TAB        &kp Q       &kp W        &kp E       &kp R         &kp T                                       &kp Y            &kp U         &kp I         &kp O       &kp P         &kp BSPC
-     &kp LCTL       &kp A       &kp S        &kp D       &kp F         &kp G            &kp LA(TAB)                &kp H            &kp J         &kp K         &kp L       &kp SEMI      &kp SQT
-     &kp LSHIFT     &kp Z       &kp X        &kp C       &kp V         &kp B                                       &kp N            &kp M         &kp COMMA     &kp DOT     &kp FSLH      &kp ESC
-                                             &kp C_MUTE  &kp LGUI      &kp NAV   &kp SPACE       &lt LSHIFT RET    &kp SYM          &kp LALT      &kp LC(BSPC)
+    &kp TAB        &kp Q       &kp W        &kp E       &kp R         &kp T                                       &kp Y            &kp U         &kp I         &kp O       &kp P         &kp BSPC
+    &kp LCTL       &kp A       &kp S        &kp D       &kp F         &kp G            &kp LA(TAB)                &kp H            &kp J         &kp K         &kp L       &kp SEMI      &kp SQT
+    &kp LSHIFT     &kp Z       &kp X        &kp C       &kp V         &kp B                                       &kp N            &kp M         &kp COMMA     &kp DOT     &kp FSLH      &kp ESC
+                                            &kp C_MUTE  &kp LGUI      &kp NAV   &kp SPACE       &lt LSHIFT RET    &kp SYM          &kp LALT      &kp LC(BSPC)
+
             >;
         };
 
         nav_layer {
             label = "Navigation";
-            
+
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            
+
             bindings = <
-    &trans     &trans       &kp PG_UP    &kp UP      &kp PG_DN     &kp C_AC_REFRESH                                      &kp ASTRK     &kp N7       &kp N8        &kp N9      &kp MINUS   &trans
-    &trans     &trans       &kp LEFT     &kp DOWN    &kp RIGHT     &kp C_AC_BACK                  &trans                 &kp FSLH      &kp N4       &kp N5        &kp N6      &kp PLUS    &trans
-    &trans     &trans       &trans       &trans      &trans        &kp C_AC_FORWARD                                      &kp EQUAL     &kp N1       &kp N2        &kp N3      &kp N0      &trans
-                                         &trans       &trans       &trans       &trans                     &trans        &trans       &trans       &trans
+    &trans     &kp TAB       &trans        &trans             &trans             &trans                                      &trans        &trans         &trans        &trans      &trans      &trans
+    &trans     &kp ESC       &trans        &kp C_REWIND       &kp C_FAST_FORWARD &kp C_PLAY_PAUSE      &trans                &kp LEFT      &kp DOWN       &kp UP        &kp RIGHT   &kp BSPC    &trans
+    &trans     &kp C_BRI_DEC &kp C_BRI_INC &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp K_MUTE                                  &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END     &trans      &trans
+                                           &trans             &trans             &trans          &trans       &trans         &trans        &trans         &trans
             >;
         };
 
         sym_layer {
             label = "Symbols";
-            
+
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            
+
             bindings = <
-    &trans     &kp EXCL     &kp AT       &kp HASH        &kp DLLR         &kp PRCNT                                   &kp CARET     &kp AMPS          &kp ASTRK     &kp UNDER   &kp EQUAL   &trans
-    &trans     &kp MINUS    &kp LBKT     &kp LBRC        &kp LPAR         &kp LT                &trans                &kp GT        &kp RPAR          &kp RBRC      &kp RBKT    &kp PLUS    &trans
-    &trans     &kp CAPS     &kp GRAVE    &kp LC(LS(TAB)) &kp LC(LG(LEFT)) &caps_word                                  &trans        &kp LC(LG(RIGHT)) &kp LC(TAB)   &trans      &kp BSLH    &trans
-                                         &trans          &trans           &kp RET       &kp DEL        &kp BSPC       &trans        &trans            &trans
+    &kp GRAVE   &kp N1        &kp N2        &kp N3          &kp N4           &kp N5                                      &kp N6        &kp N7            &kp N8        &kp N9      &kp N0      &trans
+    &trans      &kp GRAVE     &trans        &kp ESC         &trans           &kp LT                &trans                &kp GT        &kp MINUS         &kp EQUAL     &kp LBKT    &kp RBKT    &kp BSLH
+    &trans      &trans        &trans        &trans          &trans           &trans                                      &trans        &caps_word        &kp RET       &kp DOT     &kp FSLH    &trans
+                                            &trans          &trans           &trans        &trans         &trans         &trans        &trans            &trans
             >;
         };
 
@@ -112,20 +122,20 @@
             label = "Function";
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            
+
             bindings = <
-    &trans     &trans       &kp LS(PG_UP) &kp LS(UP)   &kp LS(PG_DN) &trans                                      &kp C_PLAY_PAUSE &kp F7       &kp F8        &kp F9      &kp F10     &trans
-    &trans     &kp LS(HOME) &kp LS(LEFT)  &kp LS(DOWN) &kp LS(RIGHT) &kp LS(END)           &trans                &kp K_VOL_UP     &kp F4       &kp F5        &kp F6      &kp F11     &trans
-    &trans     &trans       &trans        &trans       &trans        &kp C_MUTE                                  &kp K_VOL_DN     &kp F1       &kp F2        &kp F3      &kp F12     &trans
-                                          &trans       &trans        &trans        &trans         &trans         &trans           &kp SPACE    &trans
+    &trans     &kp F1       &kp F2       &kp F3             &kp F4           &kp F5                                      &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &trans
+    &trans     &kp F11      &kp F12      &trans             &trans           &trans               &trans                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+    &trans     &trans       &trans       &trans             &trans           &bt BT_CLR                                  &trans        &trans        &trans        &trans        &trans        &trans
+                                         &trans             &trans           &trans        &trans         &trans         &trans        &trans        &trans
             >;
         };
 
         media_layer {
             label = "Media";
-            
+
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            
+
             bindings = <
     &rgb_ug RGB_COLOR_HSB(0,0,100)         &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &trans            &trans                            &trans             &bt BT_PRV        &bt BT_NXT         &trans         &trans          &trans
     &rgb_ug RGB_COLOR_HSB(224,100,100)     &trans           &rgb_ug RGB_HUI  &rgb_ug RGB_SAI &rgb_ug RGB_BRI   &rgb_ug RGB_SPI      &trans       &bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2   &bt BT_SEL 3    &trans
@@ -136,9 +146,9 @@
 
         mouse_layer {
             label = "Mouse";
-            
+
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP &inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP &inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
-            
+
             bindings = <
     &trans     &bootloader &trans      &trans      &trans      &trans                                           &trans      &trans      &trans      &trans      &trans      &trans
     &trans     &trans      &trans      &trans      &trans      &trans                   &trans                  &trans      &trans      &trans      &trans      &trans      &trans
@@ -149,9 +159,9 @@
 
         winnav_layer {
             label = "Win Navigation";
-            
+
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            
+
             bindings = <
     &trans     &trans       &trans       &kp LG(UP)   &trans        &trans                                      &trans      &trans      &trans      &trans      &trans      &trans
     &trans     &trans       &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT) &trans                &trans                &trans      &trans      &trans      &trans      &trans      &trans
