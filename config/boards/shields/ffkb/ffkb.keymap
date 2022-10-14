@@ -82,6 +82,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <2>;
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mt NAV NAV>, <&mo NUM>;
         };
@@ -89,6 +90,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <2>;
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mt SYM SYM>, <&mo BLUET>;
         };
