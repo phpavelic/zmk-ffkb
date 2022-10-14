@@ -83,14 +83,14 @@
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt NAV NAV>, <&sl NUM>;
+            bindings = <&mt NAV NAV>, <&mo NUM>;
         };
         blue_mt: bluetooth_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt SYM SYM>, <&sl BLUET>;
+            bindings = <&mt SYM SYM>, <&mo BLUET>;
         };
     };
 
