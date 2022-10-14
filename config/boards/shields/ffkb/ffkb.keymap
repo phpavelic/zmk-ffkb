@@ -106,7 +106,7 @@
     &kp TAB        &kp Q       &kp W        &kp E       &kp R         &kp T                                       &kp Y            &kp U         &kp I         &kp O       &kp P         &kp BSPC
     &kp LCTL       &kp A       &kp S        &kp D       &kp F         &kp G            &kp LA(TAB)                &kp H            &kp J         &kp K         &kp L       &kp SEMI      &kp SQT
     &kp LSHIFT     &kp Z       &kp X        &kp C       &kp V         &kp B                                       &kp N            &kp M         &kp COMMA     &kp DOT     &kp FSLH      &kp ESC
-                                            &kp C_MUTE  &kp LGUI      &sl NAV   &kp SPACE       &mt LSHIFT RET    &sl SYM          &kp LALT      &kp LC(BSPC)
+                                            &kp C_MUTE  &kp LGUI      &num_mt   &kp SPACE       &mt LSHIFT RET    &blue_mt         &kp LALT      &kp LC(BSPC)
 
             >;
         };
