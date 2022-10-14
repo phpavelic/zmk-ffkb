@@ -81,14 +81,14 @@
         num_mt: numpad_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&mt NAV NAV>, <&mo NUM>;
         };
         blue_mt: bluetooth_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&mt SYM SYM>, <&mo BLUET>;
         };
