@@ -119,9 +119,9 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 
             bindings = <
-    &trans      &kp K_CALC    &kp PAGE_UP     &kp UP             &kp PAGE_DOWN        &kp K_REFRESH                                  &kp PLUS      &kp N7          &kp N8       &kp N9     &kp ASTRK      &kp BSPC
-    &trans      &none         &kp LEFT        &kp DOWN           &kp RIGHT            &kp K_BACK               &trans                &kp MINUS     &kp N4          &kp N5       &kp N6     &kp FSLH       &kp GT
-    &trans      &kp C_BRI_DEC &kp C_BRI_INC   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP      &kp K_FORWARD                                  &kp N0        &kp N1          &kp N2       &kp N3     &kp EQUAL      &kp LT
+    &trans      &kp C_AL_CALC    &kp PAGE_UP     &kp UP             &kp PAGE_DOWN        &kp C_AC_REFRESH                                  &kp COMMA      &kp N7          &kp N8       &kp N9     &kp ASTRK      &kp BSPC
+    &trans      &none         &kp LEFT        &kp DOWN           &kp RIGHT            &kp C_AC_BACK               &trans                &kp DOT     &kp N4          &kp N5       &kp N6     &kp FSLH       &kp GT
+    &trans      &kp C_BRI_DEC &kp C_BRI_INC   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP      &kp C_AC_FORWARD                                  &kp N0        &kp N1          &kp N2       &kp N3     &kp EQUAL      &kp LT
                                               &trans             &trans               &trans          &trans              &trans     &sl FUNC        &trans          &trans
             >;
         };
@@ -184,8 +184,8 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 
             bindings = <
-    &trans     &trans       &kp N7        &kp N8        &kp N9        &kp A                                      &trans      &trans      &trans      &trans      &trans      &trans
-    &trans     &trans       &kp N4        &kp N5        &kp N6        &trans                &trans                &trans      &trans      &trans      &trans      &trans      &trans
+    &trans     &trans       &kp N7        &kp N8        &kp N9        &kp COMMA                                      &trans      &trans      &trans      &trans      &trans      &trans
+    &trans     &trans       &kp N4        &kp N5        &kp N6        &kp DOT                &trans                &trans      &trans      &trans      &trans      &trans      &trans
     &trans     &trans       &kp N1        &kp N2        &kp N3        &kp N0                                      &trans      &trans      &trans      &trans      &trans      &trans
                                           &trans        &trans        &to DEFAULT     &trans         &trans       &trans      &trans      &trans
             >;
