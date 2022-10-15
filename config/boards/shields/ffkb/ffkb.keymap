@@ -13,6 +13,13 @@
 #define MOUSE   5
 #define NUM     6
 
+
+#define U_RDO &kp LC(Y)
+#define U_PST &kp LC(V)
+#define U_CPY &kp LC(C)
+#define U_CUT &kp LC(X)
+#define U_UND &kp LC(Z)
+
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
 };
@@ -102,7 +109,7 @@
         default_layer {
             label = "Default";
 
-            sensor-bindings = <&inc_dec_kp C_AC_UNDO C_AC_REDO &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp U_UND U_RDO &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 
             bindings = <
     &kp TAB        &kp Q       &kp W        &kp E       &kp R         &kp T                                       &kp Y            &kp U         &kp I         &kp O       &kp P         &kp BSPC
