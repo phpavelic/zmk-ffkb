@@ -84,7 +84,7 @@
             #binding-cells = <0>;
             #flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo NAV>, <&to DEFAULT>, <&to NUM>;
+            bindings = <&mo NAV>, <&to NUM>;
         };
         blue_mt: bluetooth_mod_tap {
             compatible = "zmk,behavior-tap-dance";
@@ -92,7 +92,7 @@
             #binding-cells = <0>;
             #flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo SYM>, <&to DEFAULT>, <&to BLUET>;
+            bindings = <&mo SYM>, <&to BLUET>;
         };
     };
 
