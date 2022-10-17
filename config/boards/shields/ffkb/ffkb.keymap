@@ -104,7 +104,7 @@
         default_layer {
             label = "Default";
 
-            sensor-bindings = <&inc_dec_kp U_UND U_RDO &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(Z) LC(Y) &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 
             bindings = <
     &kp TAB        &kp Q       &kp W        &kp E       &kp R         &kp T                                       &kp Y            &kp U         &kp I         &kp O       &kp P         &kp BSPC
