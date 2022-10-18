@@ -118,7 +118,7 @@
         nav_layer {
             label = "Navigation";
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(Z) LC(Y) &inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN >;
 
             bindings = <
     &trans      &kp C_AL_CALC    &kp PAGE_UP     &kp UP             &kp PAGE_DOWN        &kp C_AC_REFRESH                                  &kp COMMA      &kp N7          &kp N8       &kp N9     &kp ASTRK      &kp DELETE
@@ -131,7 +131,7 @@
         sym_layer {
             label = "Symbols";
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(Z) LC(Y) &inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN >;
 
             bindings = <
     &trans      &kp EXCL      &kp AT        &kp HASH        &kp DLLR         &kp PRCNT                                   &kp CARET        &kp AMPS        &kp LPAR       &kp RPAR     &kp ASTRK          &kp BSPC
@@ -144,7 +144,7 @@
         func_layer {
             label = "Function";
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(Z) LC(Y) &inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN >;
 
             bindings = <
     &none     &none       &none       &none             &none           &none                                      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5       &kp F6
@@ -157,7 +157,7 @@
         bluet_layer {
             label = "Bluetooth";
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(Z) LC(Y) &inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN >;
 
             bindings = <
     &out OUT_TOG   &none   &none     &out OUT_USB   &out OUT_BLE   &none                            &none              &none     &none     &none     &none     &none    &none
@@ -170,7 +170,7 @@
         mouse_layer {
             label = "Mouse";
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP &inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP &inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp LC(Z) LC(Y) &inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN >;
 
             bindings = <
     &trans     &bootloader &trans      &trans      &trans      &trans                                           &trans      &trans      &trans      &trans      &trans      &trans
@@ -183,7 +183,7 @@
         num_layer {
             label = "Numpad";
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(Z) LC(Y) &inc_dec_kp PAGE_UP PAGE_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN >;
 
             bindings = <
     &trans     &none       &kp N7        &kp N8        &kp N9        &kp COMMA                                      &none     &none     &none     &none     &none    &kp BSPC
